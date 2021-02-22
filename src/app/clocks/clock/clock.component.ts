@@ -102,4 +102,8 @@ export class ClockComponent {
     clearInterval(this.refreshInterval);
   }
 
+  newFunction() {
+    console.log("Hey");
+  }
+
 }
