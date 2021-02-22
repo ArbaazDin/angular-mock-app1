@@ -1,0 +1,56 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    padding: 10px;
+}
+
+.grid-item:hover {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    background-color: rgba(128, 128, 128, 0.568);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    background-color: honeydew;
+}
+
+.grid-item {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    background-color: rgba(128, 128, 128, 0.952);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    color:white;
+}
+
+.grid-item-next-month {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    background-color: rgba(128, 128, 128, 0.952);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    color:black;
+}
+
+.grid-item-previous-month {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    background-color: rgba(128, 128, 128, 0.952);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    color:black;
+}
+
+.grid-days {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.selectedDate {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    background-color: rgba(23, 231, 23, 0.438);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}

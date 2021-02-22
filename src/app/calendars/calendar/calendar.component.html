@@ -1,0 +1,25 @@
+<div class="row">
+    <!-- Padding -->
+    <div class="col-3"></div>
+
+    <div class="col-6">
+
+        <div class="row d-flex justify-content-between pl-4 pr-4">
+            <button class="btn btn-primary" (click)="previousMonth()">Previous</button>
+            <h2>{{monthToDisplay | date: 'MMMM-yy'}}</h2>
+            <button class="btn btn-primary" (click)="nextMonth()">Next</button>
+        </div>
+
+        <div class="grid-container">
+            <div *ngFor="let day of days" class="grid-days">{{day}}</div>
+            <div *ngFor="let date of dates"
+                [ngClass]="{'selectedDate':date.isSelected === true, 'grid-item':date.isSelected === false, 'grid-item-next-month':date.monthType === 'next', 'grid-item-previous-month':date.monthType === 'previous'}"
+                (click)="selectDay(date)">{{date.value}}</div>
+        </div>
+
+    </div>
+
+
+    <!-- Padding -->
+    <div class="col-3"></div>
+</div>

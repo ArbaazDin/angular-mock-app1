@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mock-app1"
+    }
+  },
+  "defaultProject": "mock-app1",
+  "cli": {
+    "analytics": false
+  }
 }
