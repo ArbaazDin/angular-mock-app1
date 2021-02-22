@@ -12,26 +12,22 @@ export class ClockComponent {
 
   public ctx: CanvasRenderingContext2D;
   public radius;
+  public refreshInterval;
 
   ngAfterViewInit(): void {
     this.ctx = this.myCanvas.nativeElement.getContext('2d');
     this.radius = this.myCanvas.nativeElement.height / 2;
     this.ctx.translate(this.radius, this.radius);
     this.radius = this.radius * 0.90
-    setInterval(()=> {
+    this.refreshInterval = setInterval(() => {
       this.drawClock();
     }, 1000);
   }
 
   drawClock() {
-    this.printHey();
     this.drawFace();
     this.drawNumbers();
     this.drawTime();
-  }
-
-  printHey():void {
-    console.log("hey");
   }
 
   drawFace(): void {
@@ -102,6 +98,8 @@ export class ClockComponent {
     ctx.rotate(-pos);
   }
 
-
+  ngOnDestroy() {
+    clearInterval(this.refreshInterval);
+  }
 
 }
