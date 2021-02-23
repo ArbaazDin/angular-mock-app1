@@ -7,27 +7,27 @@
     padding: 10px;
     & .grid-item {
         color: white;
+        @extend %grid-common;
     }
     & .grid-item:hover {
         background-color: honeydew;
         color: lightsalmon;
+        @extend %grid-common;
     }
     & .grid-item-next-month {
         color: $calendar-border-color;
+        @extend %grid-common;
     }
     & .grid-item-previous-month {
         color: $calendar-border-color;
+        @extend %grid-common;
     }
     & .grid-days {
-        border: 1px solid $calendar-border-color;
-        padding: $default-cell-padding;
-        text-align: center;
-        border-radius: $cell-border-radius;
-        font: 200% $font-stack;
+        @include grid-days();
     }
     & .selectedDate {
         border: 1px solid $calendar-border-color;
-        background-color: rgba(23, 231, 23, 0.438);
+        background-color: set-grid-item-bg-color(rgba(0, 0, 0, 0.137));
         padding: $default-cell-padding;
         text-align: center;
         border-radius: $cell-border-radius;
