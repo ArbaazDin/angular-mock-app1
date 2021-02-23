@@ -1,0 +1,20 @@
+%grid-common {
+    border: 1px solid $calendar-border-color;
+    background-color: $calendar-bg-color;
+    padding: $default-cell-padding;
+    text-align: center;
+    border-radius: $cell-border-radius;
+    font: 200% $font-stack;
+}
+
+.grid-item {
+    @extend %grid-common;
+}
+
+.grid-item-next-month {
+    @extend %grid-common;
+}
+
+.grid-item-previous-month {
+    @extend %grid-common;
+}

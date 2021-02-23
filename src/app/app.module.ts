@@ -7,6 +7,9 @@ import { CalendarManagerComponent } from './calendars/calendar-manager/calendar-
 import { CalendarComponent } from './calendars/calendar/calendar.component';
 import { ClockManagerComponent } from './clocks/clock-manager/clock-manager.component';
 import { ClockComponent } from './clocks/clock/clock.component';
+import { MonthCalendarSassComponent } from './month-cal-sass/month-calendar-sass/month-calendar-sass.component';
+import { MonthCalendarSassManagerComponent } from './month-cal-sass/month-calendar-sass-manager/month-calendar-sass-manager.component';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +17,9 @@ import { ClockComponent } from './clocks/clock/clock.component';
     CalendarManagerComponent,
     CalendarComponent,
     ClockManagerComponent,
-    ClockComponent
+    ClockComponent,
+    MonthCalendarSassComponent,
+    MonthCalendarSassManagerComponent
   ],
   imports: [
     BrowserModule,

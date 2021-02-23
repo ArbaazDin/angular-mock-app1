@@ -1,0 +1,36 @@
+@import "./../scss/config";
+@import "./../scss/grid-item-common";
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    padding: 10px;
+    & .grid-item {
+        color: white;
+    }
+    & .grid-item:hover {
+        background-color: honeydew;
+        color: lightsalmon;
+    }
+    & .grid-item-next-month {
+        color: $calendar-border-color;
+    }
+    & .grid-item-previous-month {
+        color: $calendar-border-color;
+    }
+    & .grid-days {
+        border: 1px solid $calendar-border-color;
+        padding: $default-cell-padding;
+        text-align: center;
+        border-radius: $cell-border-radius;
+        font: 200% $font-stack;
+    }
+    & .selectedDate {
+        border: 1px solid $calendar-border-color;
+        background-color: rgba(23, 231, 23, 0.438);
+        padding: $default-cell-padding;
+        text-align: center;
+        border-radius: $cell-border-radius;
+        font: 230% $font-stack;
+    }
+}
